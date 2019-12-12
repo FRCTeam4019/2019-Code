@@ -34,7 +34,7 @@ public class RobotMap {
   
 	public static final int DRIVE_AXIS_FORWARD = 1;
 	public static final int DRIVE_AXIS_ROTATION = 0;
-  public static final int DRIVE_AXIS_THROTTLE = 3;
+  public static final int DRIVE_AXIS_THROTTLE = 2;
   
   public static final double DRIVE_THROTTLE = 0.5;
 

@@ -29,7 +29,8 @@ public class Drive extends Command {
   protected void execute() {
     double forward = -Robot.m_oi.driveJoystick.getRawAxis(RobotMap.DRIVE_AXIS_FORWARD);
     double rotation = Robot.m_oi.driveJoystick.getRawAxis(RobotMap.DRIVE_AXIS_ROTATION);
-    double throttle = Robot.m_oi.driveJoystick.getRawAxis(RobotMap.DRIVE_AXIS_THROTTLE)/ -2 + 0.5;
+    // double throttle = (-Robot.m_oi.driveJoystick.getRawAxis(RobotMap.DRIVE_AXIS_THROTTLE) + 1) / 2;
+    double throttle = Math.abs(Robot.m_oi.driveJoystick.getRawAxis(RobotMap.DRIVE_AXIS_THROTTLE))
 
     Robot.m_drivetrain.setPower(throttle * (forward + rotation), throttle * (forward - rotation));
     /*if (Robot.m_oi.driveJoystick.getRawButton(RobotMap.AUTO_FLOOR_BUTTON_ID)) {
